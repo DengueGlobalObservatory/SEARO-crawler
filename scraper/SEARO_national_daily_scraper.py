@@ -174,7 +174,7 @@ else:
 
         # Initialize ActionChains and the final DataFrame
         action = ActionChains(driver)
-        final_df = pd.DataFrame(columns=['Month', 'Year', 'Value'])
+        final_df = pd.DataFrame(columns=[ 'Year', 'Month', 'Value'])
         x_offsets = [600, 500, 400, 300, 200, 100, 0, -100, -200, -300, -400, -500]
         # interactive line graph element
         graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_trend_cases_country_month_out")))
