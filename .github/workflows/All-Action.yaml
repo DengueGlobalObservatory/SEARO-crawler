@@ -1,0 +1,46 @@
+name: SEARO dashboard crawling 
+
+  workflow_dispatch:
+  schedule:
+    - cron: '00 08 * * *' # 08:00 am UTC every day
+
+jobs:
+  Scraping_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repo
+        uses: actions/checkout@v3
+      - name: Setting up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12.3'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium
+          pip install bs4
+          pip install pandas
+          pip install requests
+
+        
+      - name: Create Downloads directory
+        run: mkdir -p ${{ github.workspace }}/output
+            
+      # Get the latest data and store it as a CSV
+      #- name: Fetch latest data
+      #  run: |-        
+      #    curl "https://raw.githubusercontent.com/ahyoung-lim/DengueCrawler/main/data/report_date.csv" -o data/report_date.csv
+              
+      - name: Running the Python script
+        run: python scraper/SEARO_national_daily_scraper.py
+        
+      - name: Commit and Push 
+        run: |
+         git config --global user.name "github-actions[bot]"
+         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+         git add -A
+         timestamp=$(date -u)
+         git commit -am "Latest data: ${timestamp}" || exit 0
+         git push
+
+        
