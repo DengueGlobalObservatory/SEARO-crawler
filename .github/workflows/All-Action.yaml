@@ -1,5 +1,5 @@
 name: SEARO dashboard crawling 
-
+on:
   workflow_dispatch:
   schedule:
     - cron: '00 08 * * *' # 08:00 am UTC every day
