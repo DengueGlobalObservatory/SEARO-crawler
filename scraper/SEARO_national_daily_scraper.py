@@ -78,7 +78,6 @@ else:
    import subprocess
    import re
    import sys
-   from dateutil.relativedelta import relativedelta
 
    def get_chrome_version():
         try:
@@ -123,7 +122,7 @@ else:
    chrome_options = uc.ChromeOptions()
    chrome_options.add_experimental_option("prefs", prefs)
 
-   driver = uc.Chrome(headless=False, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
+   driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
    driver.get('https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#') 
 
    print(driver.title)
