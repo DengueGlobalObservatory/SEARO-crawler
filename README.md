@@ -1,4 +1,4 @@
-# Data scraper for global dengue data
+# Data scraper for WHO SEARO dengue data
 This repository contains scripts to scrape dengue data for WHO SEARO using Python. The workflows are automated using GitHub Actions.
 
 ## Structure
