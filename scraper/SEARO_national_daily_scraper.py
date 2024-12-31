@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 from datetime import datetime
-
+import time
 
 # Fetch the webpage
 url = "https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#"
