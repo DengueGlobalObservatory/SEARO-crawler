@@ -18,12 +18,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install selenium
-          pip install bs4
+          pip install beautifulsoup4
           pip install pandas
           pip install requests
           pip install undetected_chromedriver
           pip install setuptools
           pip install webdriver_manager
+          
 
         
       - name: Create Downloads directory
