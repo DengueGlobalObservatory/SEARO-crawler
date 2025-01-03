@@ -8,7 +8,7 @@ import time
 # Fetch the webpage
 url = "https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#"
 response = requests.get(url)
-time.sleep(10)
+time.sleep(30)
 soup = BeautifulSoup(response.text, 'html.parser')
 
 # Select the paragraph containing the date
