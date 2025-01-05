@@ -5,14 +5,40 @@ import re
 from datetime import datetime
 import time
 
-# Fetch the webpage
-url = "https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#"
-response = requests.get(url)
-time.sleep(30)
-soup = BeautifulSoup(response.text, 'html.parser')
+# Function to fetch the date paragraph
+def fetch_date_paragraph(url, max_attempts=3, wait_time=20):
+    attempt = 0
+    while attempt < max_attempts:
+        try:
+            # Fetch the webpage
+            response = requests.get(url)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            
+            # Select the paragraph containing the date
+            date_paragraph = soup.find('p', string=lambda t: t and "Data as of" in t)
+            if date_paragraph:
+                return date_paragraph.get_text(strip=True)
+            else:
+                print(f"Attempt {attempt + 1}: 'Data as of' paragraph not found. Retrying...")
+        except Exception as e:
+            print(f"Attempt {attempt + 1}: Encountered an error: {e}. Retrying...")
+        
+        attempt += 1
+        time.sleep(wait_time)  # Wait before retrying
+    
+    # If all attempts fail, raise an exception or return None
+    print("Maximum attempts reached. Failed to fetch the 'Data as of' paragraph.")
+    return None
 
-# Select the paragraph containing the date
-date_paragraph = soup.find('p', string=lambda t: t and "Data as of" in t).get_text(strip=True)
+# URL of the webpage
+url = "https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#"
+
+# Fetch the date paragraph
+date_paragraph = fetch_date_paragraph(url)
+if date_paragraph:
+    print(f"Successfully fetched paragraph: {date_paragraph}")
+else:
+    print("Failed to fetch the paragraph after maximum retries.")
 
 # Define a regular expression pattern to match the date after "Data reported as of"
 pattern = r"\d{1,2}\s+[A-Za-z]+\s+\d{4}"
