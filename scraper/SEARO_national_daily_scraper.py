@@ -148,13 +148,13 @@ else:
         except Exception as e:
             raise RuntimeError("Failed to get Chrome version") from e
 
-    # Get the major version of Chrome installed
+   # Get the major version of Chrome installed
    chrome_version = get_chrome_version()
 
    # Set the download directory to the GitHub repository folder
    github_workspace = os.getenv('GITHUB_WORKSPACE')
    download_directory = os.path.join(github_workspace, 'output')
-
+   
    prefs = {"download.default_directory": download_directory,}
    
    # set chrome download directory
@@ -200,10 +200,10 @@ else:
 
         time.sleep(5)  # Wait for the page to load after selecting the country
 
-
-   # Find an approximate location on the graph to hover over
+    
+   # Find an approximate location on the line graph to hover over
    # and repeat the action with different x-offsets
-   def extract_tooltip_data():
+   def extract_line_graph_data():
         """
         Extracts tooltip data for multiple x-offsets and returns a DataFrame.
 
@@ -245,6 +245,7 @@ else:
                     'Year': [int(year) for year in years],
                     'Month': [month] * len(years),
                     'Value': [float(value) if value != 'NaN' else 'NA' for value in values]
+                    
                 })
 
                 # Append the temporary DataFrame to the final DataFrame
@@ -253,6 +254,59 @@ else:
             except Exception as e:
                 print(f"Error at x_offset {x_offset}: {e}")
 
+        return final_df
+
+   # repeat with bar graph
+   
+   def extract_bar_graph_data():
+        """
+        Extracts tooltip data for multiple x-offsets and returns a DataFrame.
+
+        Returns:
+            A pandas DataFrame containing 'Month', 'Year', and 'Value' columns.
+        """
+
+        # Initialize ActionChains and the final DataFrame
+        action = ActionChains(driver)
+        final_df = pd.DataFrame(columns=[ 'Year', 'Month', 'Value'])
+        x_offsets =  [140, 120, 100, 60, 30, 10, -30, -60, -90, -120]
+
+        # interactive line graph element
+        graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_total_case_evolution")))   
+
+        # Loop to extract tooltip data for each x_offset
+        for x_offset in x_offsets:
+            action.move_to_element_with_offset(graph, 0, 0).perform()
+            time.sleep(2)  # Wait for the tooltip to appear
+
+            try:
+                # Extract the pop-up text (assuming a specific CSS selector)
+                tooltip = driver.find_element(By.CSS_SELECTOR, "div[style*='z-index: 9999999']")
+                cases_text = driver.execute_script("return arguments[0].innerText;", tooltip)
+                    
+                # Split the text by lines
+                lines = cases_text.split('\n')
+
+                # Extract the month from the first line
+                month = lines[0]
+
+                # Extract years and values from the remaining lines
+                values = lines[2::2]
+
+                # Create a temporary DataFrame
+                temp_df = pd.DataFrame({
+                    'Year': 2024,
+                    'Month': [month] ,
+                    
+                    'Value': [float(value) if value != 'NaN' else 'NA' for value in values]
+                })
+
+                # Append the temporary DataFrame to the final DataFrame
+                final_df = pd.concat([final_df, temp_df], ignore_index=True)
+                
+                
+            except Exception as e:
+                print(f"Error at x_offset {x_offset}: {e}")
         return final_df
 
 
@@ -274,21 +328,28 @@ else:
         for country in countries_list:
             # Select the country from the dropdown
             select_country(country)
+            
+            # Extract the line graph data for the selected country
+            line_data = extract_line_graph_data()
 
-            # Extract the tooltip data for the selected country
-            country_data = extract_tooltip_data()
+            bar_data = extract_bar_graph_data()
 
             # Add a new column to identify the country for each row
-            country_data['Country'] = country
-            
+            line_data['Country'] = country
+            line_data['Type'] = "Line"
+            bar_data['Country'] = country
+            bar_data['Type'] = "Bar"
+
+            # Concatenate the two DataFrames into one
+            combined_data = pd.concat([line_data, bar_data])
+
             # Append the country's data to the all_data list
-            all_data.append(country_data)
+            all_data.append(combined_data)
 
         # Concatenate all DataFrames into a single DataFrame
         final_df = pd.concat(all_data, ignore_index=True)
 
         # Save the merged DataFrame to a CSV file
-        
         output_file = f"{output_directory}/SEARO_National_data_{today}.csv"
         final_df.to_csv(output_file, index=False)
         
@@ -300,3 +361,5 @@ else:
 
    # Run the extraction for all countries
    extract_data_for_countries(countries_list, download_directory, today)
+
+
