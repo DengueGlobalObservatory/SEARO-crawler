@@ -54,7 +54,7 @@ prefs = {"download.default_directory": os.getcwd()}
 chrome_options.add_experimental_option("prefs", prefs)
 
 
-driver = uc.Chrome(headless=False, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
+driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
 driver.get('https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#') 
 
 print(driver.title)
@@ -94,59 +94,55 @@ def select_country(country_name):
     time.sleep(5)  # Wait for the page to load after selecting the country
 
 
-# Find an approximate location on the graph to hover over
-# and repeat the action with different x-offsets
-def extract_tooltip_data():
-    """
-    Extracts tooltip data for multiple x-offsets and returns a DataFrame.
+def extract_bar_graph_data():
+        """
+        Extracts tooltip data for multiple x-offsets and returns a DataFrame.
 
-    Returns:
-        A pandas DataFrame containing 'Month', 'Year', and 'Value' columns.
-    """
+        Returns:
+            A pandas DataFrame containing 'Month', 'Year', and 'Value' columns.
+        """
 
-    # Initialize ActionChains and the final DataFrame
-    action = ActionChains(driver)
-    final_df = pd.DataFrame(columns=['Month', 'Year', 'Value'])
-    x_offsets = [600, 500, 400, 300, 200, 100, 0, -100, -200, -300, -400, -500]
-    # interactive line graph element
-    graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_trend_cases_country_month_out")))
+        # Initialize ActionChains and the final DataFrame
+        action = ActionChains(driver)
+        final_df = pd.DataFrame(columns=[ 'Year', 'Month', 'Value'])
+        x_offsets =  [140, 120, 100, 60, 30, 10, -30, -60, -90, -120]
 
-    # Loop to extract tooltip data for each x_offset
-    for x_offset in x_offsets:
-        action.move_to_element_with_offset(graph, x_offset, 0).perform()
-        time.sleep(2)  # Wait for the tooltip to appear
+        # interactive line graph element
+        graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_total_case_evolution")))   
 
-        try:
-            # Extract the pop-up text (assuming a specific CSS selector)
-            tooltip = WebDriverWait(driver, 10).until(
-                EC.visibility_of_element_located((By.CSS_SELECTOR, "div[style*='z-index: 9999999']"))
-            )
-            cases_text = tooltip.text
+        # Loop to extract tooltip data for each x_offset
+        for x_offset in x_offsets:
+            action.move_to_element_with_offset(graph, x_offset, 0).perform()
+            time.sleep(2)  # Wait for the tooltip to appear
 
-            # Split the text by lines
-            lines = cases_text.split('\n')
+            try:
+                # Extract the pop-up text (assuming a specific CSS selector)
+                tooltip = driver.find_element(By.CSS_SELECTOR, "div[style*='z-index: 9999999']")
+                cases_text = driver.execute_script("return arguments[0].innerText;", tooltip)
+                    
+                # Split the text by lines
+                lines = cases_text.split('\n')
 
-            # Extract the month from the first line
-            month = lines[0]
+                # Extract the month from the first line
+                month = lines[0].split('-')[0]
 
-            # Extract years and values from the remaining lines
-            years = lines[1::2]
-            values = lines[2::2]
+                # Extract years and values from the remaining lines
+                values = lines[2::2]
 
-            # Create a temporary DataFrame
-            temp_df = pd.DataFrame({
-                'Year': [int(year) for year in years],
-                'Month': [month] * len(years),
-                'Value': [float(value) if value != 'NaN' else 'NA' for value in values]
-            })
+                # Create a temporary DataFrame
+                temp_df = pd.DataFrame({
+                    'Year': 2024,
+                    'Month': month ,
+                    'Value': values
+                })
 
-            # Append the temporary DataFrame to the final DataFrame
-            final_df = pd.concat([final_df, temp_df], ignore_index=True)
-
-        except Exception as e:
-            print(f"Error at x_offset {x_offset}: {e}")
-
-    return final_df
+                # Append the temporary DataFrame to the final DataFrame
+                final_df = pd.concat([final_df, temp_df], ignore_index=True)
+                
+                
+            except Exception as e:
+                print(f"Error at x_offset {x_offset}: {e}")
+        return final_df
 
 
 def extract_data_for_countries(countries_list, output_directory, today):
@@ -169,7 +165,7 @@ def extract_data_for_countries(countries_list, output_directory, today):
         select_country(country)
 
         # Extract the tooltip data for the selected country
-        country_data = extract_tooltip_data()
+        country_data = extract_bar_graph_data()
 
         # Add a new column to identify the country for each row
         country_data['Country'] = country
@@ -182,7 +178,7 @@ def extract_data_for_countries(countries_list, output_directory, today):
 
     # Save the merged DataFrame to a CSV file
     
-    output_file = f"{output_directory}/SEARO_National_data_{today}.csv"
+    output_file = f"{output_directory}/SEARO_National_data_barchart_{today}.csv"
     final_df.to_csv(output_file, index=False)
     
     print(f"Data for all countries saved to {output_file}")
