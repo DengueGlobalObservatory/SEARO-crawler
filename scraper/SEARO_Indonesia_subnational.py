@@ -21,7 +21,7 @@ def get_chrome_version():
             # Command to retrieve Chrome version from Windows registry
             output = subprocess.check_output(
                 r'reg query "HKEY_CURRENT_USER\Software\Google\Chrome\BLBeacon" /v version',
-                shell=True, 
+                shell=True,
                 text=True
             )
             version = re.search(r'\s+version\s+REG_SZ\s+(\d+)\.', output)
@@ -54,8 +54,8 @@ prefs = {"download.default_directory": os.getcwd()}
 chrome_options.add_experimental_option("prefs", prefs)
 
 
-driver = uc.Chrome(headless=False, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
-driver.get('https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#') 
+driver = uc.Chrome(headless=False, use_subprocess=False, options = chrome_options, version_main=chrome_version)
+driver.get('https://worldhealthorg.shinyapps.io/searo-dengue-dashboard/#')
 
 print(driver.title)
 time.sleep(5)
@@ -94,7 +94,7 @@ def scrape_table():
     # Check if rows exist
     if not rows:
         return None  # Return None if no rows are found
-    
+
     # Loop through the rows and extract the text for each cell
     for row in rows:
         cells = row.find_elements(By.XPATH, ".//div[@role='cell']")
@@ -125,25 +125,25 @@ print(f"Current month: {max_month_text}")
 def move_slider_left_until_target_month(target_month):
     global data
     actions = ActionChains(driver)
-    
+
     while True:
         # Check the current month display
         current_month = driver.execute_script("return arguments[0].innerText;", month_display[0])
         # print(f"Current month: {current_month}")
-    
+
         # If the current month matches the target, stop
         if current_month == target_month:
             print(f"Target month '{target_month}' reached!")
             time.sleep(3)
             table_data = scrape_table()
             data.extend(table_data)
-            break    
+            break
 
-        else: 
+        else:
             # Move the slider handle left by a small amount
             actions.click_and_hold(slider_handle).move_by_offset(-3, 0).release().perform()
             time.sleep(5)  # Pause to let the slider update
-    
+
     return data
 
 
@@ -167,8 +167,8 @@ while current_date >= start_date:
     monthly_sequence.append(current_date.strftime("%b-%Y"))
     # Move to the next month
     current_date -= relativedelta(months=1)  # Move one month backward
-   
-monthly_sequence = monthly_sequence[160:] 
+
+monthly_sequence = monthly_sequence[0:11]
 
 
 
@@ -185,6 +185,6 @@ df = pd.DataFrame(data, columns=['Region', 'Date', 'Cases'])
 # Print the DataFrame
 print(df)
 
-df.to_csv("C:/Users/AhyoungLim/Dropbox/WORK/OpenDengue/SEARO-crawler/output/Indonesia_subnationa_Jan2007_Mar2011.csv", index=False)  
+df.to_csv("C:/Users/AhyoungLim/Dropbox/WORK/OpenDengue/SEARO-crawler/output/Indonesia_subnational_Feb2024_Dec2024.csv", index=False)
 
 driver.quit()

@@ -21,7 +21,7 @@ def get_chrome_version():
             # Command to retrieve Chrome version from Windows registry
             output = subprocess.check_output(
                 r'reg query "HKEY_CURRENT_USER\Software\Google\Chrome\BLBeacon" /v version',
-                shell=True, 
+                shell=True,
                 text=True
             )
             version = re.search(r'\s+version\s+REG_SZ\s+(\d+)\.', output)
@@ -54,8 +54,8 @@ prefs = {"download.default_directory": os.getcwd()}
 chrome_options.add_experimental_option("prefs", prefs)
 
 
-driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
-driver.get('https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#') 
+driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)
+driver.get('https://worldhealthorg.shinyapps.io/searo-dengue-dashboard/#')
 
 print(driver.title)
 time.sleep(5)
@@ -70,7 +70,7 @@ driver.execute_script("arguments[0].click();", side_panel)
 def select_country(country_name):
     """
     Select a country from the dropdown menu by its name.
-    
+
     Args:
         country_name (str): The name of the country to select from the dropdown menu.
     """
@@ -83,7 +83,7 @@ def select_country(country_name):
 
     # Modify the XPath to select the country by its name (within <span class="text">)
     country_xpath = f"//a[contains(@class, 'dropdown-item') and contains(., '{country_name}')]/span[contains(@class, 'text')]"
-    
+
     # Wait for the country to be clickable and select it
     country_filter = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, country_xpath))
@@ -108,7 +108,7 @@ def extract_bar_graph_data():
         x_offsets =  [140, 120, 100, 60, 30, 10, -30, -60, -90, -120]
 
         # interactive line graph element
-        graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_total_case_evolution")))   
+        graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_total_case_evolution")))
 
         # Loop to extract tooltip data for each x_offset
         for x_offset in x_offsets:
@@ -119,7 +119,7 @@ def extract_bar_graph_data():
                 # Extract the pop-up text (assuming a specific CSS selector)
                 tooltip = driver.find_element(By.CSS_SELECTOR, "div[style*='z-index: 9999999']")
                 cases_text = driver.execute_script("return arguments[0].innerText;", tooltip)
-                    
+
                 # Split the text by lines
                 lines = cases_text.split('\n')
 
@@ -138,8 +138,8 @@ def extract_bar_graph_data():
 
                 # Append the temporary DataFrame to the final DataFrame
                 final_df = pd.concat([final_df, temp_df], ignore_index=True)
-                
-                
+
+
             except Exception as e:
                 print(f"Error at x_offset {x_offset}: {e}")
         return final_df
@@ -152,7 +152,7 @@ def extract_data_for_countries(countries_list, output_directory, today):
     Args:
         countries_list (list): List of country names to select from the dropdown.
         output_directory (str): The directory where the CSV file will be saved.
-    
+
     Returns:
         pd.DataFrame: The merged DataFrame containing data for all countries.
     """
@@ -169,7 +169,7 @@ def extract_data_for_countries(countries_list, output_directory, today):
 
         # Add a new column to identify the country for each row
         country_data['Country'] = country
-        
+
         # Append the country's data to the all_data list
         all_data.append(country_data)
 
@@ -177,10 +177,10 @@ def extract_data_for_countries(countries_list, output_directory, today):
     final_df = pd.concat(all_data, ignore_index=True)
 
     # Save the merged DataFrame to a CSV file
-    
+
     output_file = f"{output_directory}/SEARO_National_data_barchart_{today}.csv"
     final_df.to_csv(output_file, index=False)
-    
+
     print(f"Data for all countries saved to {output_file}")
     return final_df
 
