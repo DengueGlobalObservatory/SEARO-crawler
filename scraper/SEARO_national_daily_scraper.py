@@ -14,7 +14,7 @@ def fetch_date_paragraph(url, max_attempts=3, wait_time=20):
             # Fetch the webpage
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
-            
+
             # Select the paragraph containing the date
             date_paragraph = soup.find('p', string=lambda t: t and "Data as of" in t)
             if date_paragraph:
@@ -23,16 +23,16 @@ def fetch_date_paragraph(url, max_attempts=3, wait_time=20):
                 print(f"Attempt {attempt + 1}: 'Data as of' paragraph not found. Retrying...")
         except Exception as e:
             print(f"Attempt {attempt + 1}: Encountered an error: {e}. Retrying...")
-        
+
         attempt += 1
         time.sleep(wait_time)  # Wait before retrying
-    
+
     # If all attempts fail, raise an exception or return None
     print("Maximum attempts reached. Failed to fetch the 'Data as of' paragraph.")
     return None
 
 # URL of the webpage
-url = "https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#"
+url = "https://worldhealthorg.shinyapps.io/searo-dengue-dashboard/#"
 
 # Fetch the date paragraph
 date_paragraph = fetch_date_paragraph(url)
@@ -68,7 +68,7 @@ print(df_current)
 
 # Append the new data to the existing CSV file
 
-# if the file already exists, save it to a dataframe and then append to a new one    
+# if the file already exists, save it to a dataframe and then append to a new one
 # access to CSV in git repo
 token = "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"
 headers = {'Authorization': f'token {token}'}
@@ -97,11 +97,11 @@ df_main_new = df_main_new.sort_values(by='Sys_date', ascending=False)
 last_report_date = df_main_new['Report_date'].iloc[0]
 second_last_date = df_main_new['Report_date'].iloc[1]
 
-if last_report_date == second_last_date: 
+if last_report_date == second_last_date:
    print("No data updates")
 
 # If the date has been updated then run Selenium and download data
-else: 
+else:
    print("Start data scraping...")
    import undetected_chromedriver as uc
    from selenium.webdriver.common.by import By
@@ -124,7 +124,7 @@ else:
                 # Command to retrieve Chrome version from Windows registry
                 output = subprocess.check_output(
                     r'reg query "HKEY_CURRENT_USER\Software\Google\Chrome\BLBeacon" /v version',
-                    shell=True, 
+                    shell=True,
                     text=True
                 )
                 version = re.search(r'\s+version\s+REG_SZ\s+(\d+)\.', output)
@@ -156,13 +156,13 @@ else:
    download_directory = os.path.join(github_workspace, 'output')
 
    prefs = {"download.default_directory": download_directory,}
-   
+
    # set chrome download directory
    chrome_options = uc.ChromeOptions()
    chrome_options.add_experimental_option("prefs", prefs)
 
-   driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)     
-   driver.get('https://searo-cds-dashboard.shinyapps.io/searo-dengue-dashboard/#') 
+   driver = uc.Chrome(headless=True, use_subprocess=False, options = chrome_options, version_main=chrome_version)
+   driver.get('https://worldhealthorg.shinyapps.io/searo-dengue-dashboard/#')
 
    print(driver.title)
    time.sleep(5)
@@ -177,7 +177,7 @@ else:
    def select_country(country_name):
         """
         Select a country from the dropdown menu by its name.
-        
+
         Args:
             country_name (str): The name of the country to select from the dropdown menu.
         """
@@ -190,7 +190,7 @@ else:
 
         # Modify the XPath to select the country by its name (within <span class="text">)
         country_xpath = f"//a[contains(@class, 'dropdown-item') and contains(., '{country_name}')]/span[contains(@class, 'text')]"
-        
+
         # Wait for the country to be clickable and select it
         country_filter = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, country_xpath))
@@ -263,7 +263,7 @@ else:
         Args:
             countries_list (list): List of country names to select from the dropdown.
             output_directory (str): The directory where the CSV file will be saved.
-        
+
         Returns:
             pd.DataFrame: The merged DataFrame containing data for all countries.
         """
@@ -280,7 +280,7 @@ else:
 
             # Add a new column to identify the country for each row
             country_data['Country'] = country
-            
+
             # Append the country's data to the all_data list
             all_data.append(country_data)
 
@@ -288,10 +288,10 @@ else:
         final_df = pd.concat(all_data, ignore_index=True)
 
         # Save the merged DataFrame to a CSV file
-        
+
         output_file = f"{output_directory}/SEARO_National_data_{today}.csv"
         final_df.to_csv(output_file, index=False)
-        
+
         print(f"Data for all countries saved to {output_file}")
         return final_df
 
