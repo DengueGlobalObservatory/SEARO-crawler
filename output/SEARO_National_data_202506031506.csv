@@ -1,0 +1,781 @@
+Year,Month,Value,Country
+2024,Nov,30354.0,India
+2025,Nov,NA,India
+2024,Oct,51183.0,India
+2025,Oct,NA,India
+2024,Sep,41375.0,India
+2025,Sep,NA,India
+2024,Aug,32388.0,India
+2025,Aug,NA,India
+2024,Aug,32388.0,India
+2025,Aug,NA,India
+2024,July,27675.0,India
+2025,July,NA,India
+2024,June,7499.0,India
+2025,June,NA,India
+2024,May,5145.0,India
+2025,May,NA,India
+2024,May,5145.0,India
+2025,May,NA,India
+2024,Apr,3342.0,India
+2025,Apr,2700.0,India
+2024,Mar,5597.0,India
+2025,Mar,3517.0,India
+2024,Feb,5429.0,India
+2025,Feb,NA,India
+2024,Nov,124.0,Maldives
+2025,Nov,NA,Maldives
+2024,Oct,117.0,Maldives
+2025,Oct,NA,Maldives
+2024,Sep,180.0,Maldives
+2025,Sep,NA,Maldives
+2024,Sep,180.0,Maldives
+2025,Sep,NA,Maldives
+2024,Aug,394.0,Maldives
+2025,Aug,NA,Maldives
+2024,July,440.0,Maldives
+2025,July,NA,Maldives
+2024,June,618.0,Maldives
+2025,June,NA,Maldives
+2024,June,618.0,Maldives
+2025,June,NA,Maldives
+2024,May,667.0,Maldives
+2025,May,NA,Maldives
+2024,Apr,255.0,Maldives
+2025,Apr,120.0,Maldives
+2024,Mar,125.0,Maldives
+2025,Mar,69.0,Maldives
+2024,Mar,125.0,Maldives
+2025,Mar,69.0,Maldives
+2024,Nov,380.0,Myanmar
+2025,Nov,NA,Myanmar
+2024,Oct,690.0,Myanmar
+2025,Oct,NA,Myanmar
+2024,Sep,933.0,Myanmar
+2025,Sep,NA,Myanmar
+2024,Aug,1239.0,Myanmar
+2025,Aug,NA,Myanmar
+2024,Aug,1239.0,Myanmar
+2025,Aug,NA,Myanmar
+2024,July,1236.0,Myanmar
+2025,July,NA,Myanmar
+2024,June,574.0,Myanmar
+2025,June,NA,Myanmar
+2024,May,311.0,Myanmar
+2025,May,NA,Myanmar
+2024,May,311.0,Myanmar
+2025,May,NA,Myanmar
+2024,Apr,203.0,Myanmar
+2025,Apr,235.0,Myanmar
+2024,Mar,176.0,Myanmar
+2025,Mar,167.0,Myanmar
+2024,Feb,181.0,Myanmar
+2025,Feb,120.0,Myanmar
+2023,Nov,2805.0,Nepal
+2024,Nov,5544.0,Nepal
+2025,Nov,NA,Nepal
+2023,Oct,12699.0,Nepal
+2024,Oct,12332.0,Nepal
+2025,Oct,NA,Nepal
+2023,Sep,13912.0,Nepal
+2024,Sep,11875.0,Nepal
+2025,Sep,NA,Nepal
+2023,Aug,14534.0,Nepal
+2024,Aug,6493.0,Nepal
+2025,Aug,NA,Nepal
+2023,Aug,14534.0,Nepal
+2024,Aug,6493.0,Nepal
+2025,Aug,NA,Nepal
+2023,July,6459.0,Nepal
+2024,July,1906.0,Nepal
+2025,July,NA,Nepal
+2023,June,1026.0,Nepal
+2024,June,632.0,Nepal
+2025,June,NA,Nepal
+2023,May,163.0,Nepal
+2024,May,495.0,Nepal
+2025,May,NA,Nepal
+2023,May,163.0,Nepal
+2024,May,495.0,Nepal
+2025,May,NA,Nepal
+2023,Apr,158.0,Nepal
+2024,Apr,463.0,Nepal
+2025,Apr,197.0,Nepal
+2023,Mar,195.0,Nepal
+2024,Mar,374.0,Nepal
+2025,Mar,240.0,Nepal
+2023,Feb,130.0,Nepal
+2024,Feb,408.0,Nepal
+2025,Feb,245.0,Nepal
+2007,Nov,6893.0,Indonesia
+2008,Nov,8841.0,Indonesia
+2009,Nov,9850.0,Indonesia
+2010,Nov,7705.0,Indonesia
+2011,Nov,5725.0,Indonesia
+2012,Nov,6750.0,Indonesia
+2013,Nov,4870.0,Indonesia
+2014,Nov,7877.0,Indonesia
+2015,Nov,6780.0,Indonesia
+2016,Nov,8669.0,Indonesia
+2017,Nov,4438.0,Indonesia
+2018,Nov,6873.0,Indonesia
+2019,Nov,5425.0,Indonesia
+2020,Nov,2963.0,Indonesia
+2021,Nov,9899.0,Indonesia
+2022,Nov,9423.0,Indonesia
+2023,Nov,10082.0,Indonesia
+2024,Nov,11975.0,Indonesia
+2025,Nov,NA,Indonesia
+2007,Oct,5047.0,Indonesia
+2008,Oct,6842.0,Indonesia
+2009,Oct,8345.0,Indonesia
+2010,Oct,8149.0,Indonesia
+2011,Oct,4837.0,Indonesia
+2012,Oct,5507.0,Indonesia
+2013,Oct,5703.0,Indonesia
+2014,Oct,8149.0,Indonesia
+2015,Oct,5215.0,Indonesia
+2016,Oct,8855.0,Indonesia
+2017,Oct,4127.0,Indonesia
+2018,Oct,5508.0,Indonesia
+2019,Oct,4376.0,Indonesia
+2020,Oct,2419.0,Indonesia
+2021,Oct,6092.0,Indonesia
+2022,Oct,10135.0,Indonesia
+2023,Oct,8339.0,Indonesia
+2024,Oct,10970.0,Indonesia
+2025,Oct,NA,Indonesia
+2007,Sep,5181.0,Indonesia
+2008,Sep,5398.0,Indonesia
+2009,Sep,7598.0,Indonesia
+2010,Sep,7986.0,Indonesia
+2011,Sep,3913.0,Indonesia
+2012,Sep,4341.0,Indonesia
+2013,Sep,6063.0,Indonesia
+2014,Sep,7634.0,Indonesia
+2015,Sep,4846.0,Indonesia
+2016,Sep,9277.0,Indonesia
+2017,Sep,3514.0,Indonesia
+2018,Sep,4487.0,Indonesia
+2019,Sep,4154.0,Indonesia
+2020,Sep,2743.0,Indonesia
+2021,Sep,4057.0,Indonesia
+2022,Sep,10994.0,Indonesia
+2023,Sep,7946.0,Indonesia
+2024,Sep,11074.0,Indonesia
+2025,Sep,NA,Indonesia
+2007,Aug,7470.0,Indonesia
+2008,Aug,5655.0,Indonesia
+2009,Aug,9826.0,Indonesia
+2010,Aug,9615.0,Indonesia
+2011,Aug,4372.0,Indonesia
+2012,Aug,4460.0,Indonesia
+2013,Aug,7173.0,Indonesia
+2014,Aug,7604.0,Indonesia
+2015,Aug,5485.0,Indonesia
+2016,Aug,11342.0,Indonesia
+2017,Aug,3618.0,Indonesia
+2018,Aug,4795.0,Indonesia
+2019,Aug,5386.0,Indonesia
+2020,Aug,3833.0,Indonesia
+2021,Aug,3414.0,Indonesia
+2022,Aug,12348.0,Indonesia
+2023,Aug,8719.0,Indonesia
+2024,Aug,14563.0,Indonesia
+2025,Aug,NA,Indonesia
+2007,Aug,7470.0,Indonesia
+2008,Aug,5655.0,Indonesia
+2009,Aug,9826.0,Indonesia
+2010,Aug,9615.0,Indonesia
+2011,Aug,4372.0,Indonesia
+2012,Aug,4460.0,Indonesia
+2013,Aug,7173.0,Indonesia
+2014,Aug,7604.0,Indonesia
+2015,Aug,5485.0,Indonesia
+2016,Aug,11342.0,Indonesia
+2017,Aug,3618.0,Indonesia
+2018,Aug,4795.0,Indonesia
+2019,Aug,5386.0,Indonesia
+2020,Aug,3833.0,Indonesia
+2021,Aug,3414.0,Indonesia
+2022,Aug,12348.0,Indonesia
+2023,Aug,8719.0,Indonesia
+2024,Aug,14563.0,Indonesia
+2025,Aug,NA,Indonesia
+2007,July,10449.0,Indonesia
+2008,July,8011.0,Indonesia
+2009,July,13703.0,Indonesia
+2010,July,10929.0,Indonesia
+2011,July,4432.0,Indonesia
+2012,July,6009.0,Indonesia
+2013,July,8726.0,Indonesia
+2014,July,7360.0,Indonesia
+2015,July,7194.0,Indonesia
+2016,July,12005.0,Indonesia
+2017,July,3836.0,Indonesia
+2018,July,5303.0,Indonesia
+2019,July,7738.0,Indonesia
+2020,July,6329.0,Indonesia
+2021,July,3422.0,Indonesia
+2022,July,13118.0,Indonesia
+2023,July,8052.0,Indonesia
+2024,July,19265.0,Indonesia
+2025,July,NA,Indonesia
+2007,June,13325.0,Indonesia
+2008,June,10699.0,Indonesia
+2009,June,14120.0,Indonesia
+2010,June,11643.0,Indonesia
+2011,June,4486.0,Indonesia
+2012,June,6887.0,Indonesia
+2013,June,9170.0,Indonesia
+2014,June,8353.0,Indonesia
+2015,June,10005.0,Indonesia
+2016,June,15183.0,Indonesia
+2017,June,4190.0,Indonesia
+2018,June,4685.0,Indonesia
+2019,June,9514.0,Indonesia
+2020,June,8106.0,Indonesia
+2021,June,5444.0,Indonesia
+2022,June,12762.0,Indonesia
+2023,June,8115.0,Indonesia
+2024,June,24098.0,Indonesia
+2025,June,NA,Indonesia
+2007,May,17221.0,Indonesia
+2008,May,15127.0,Indonesia
+2009,May,15654.0,Indonesia
+2010,May,13364.0,Indonesia
+2011,May,4811.0,Indonesia
+2012,May,7999.0,Indonesia
+2013,May,10871.0,Indonesia
+2014,May,8896.0,Indonesia
+2015,May,11787.0,Indonesia
+2016,May,19075.0,Indonesia
+2017,May,5427.0,Indonesia
+2018,May,5554.0,Indonesia
+2019,May,12556.0,Indonesia
+2020,May,10725.0,Indonesia
+2021,May,6677.0,Indonesia
+2022,May,12470.0,Indonesia
+2023,May,9447.0,Indonesia
+2024,May,32020.0,Indonesia
+2025,May,157.0,Indonesia
+2007,May,17221.0,Indonesia
+2008,May,15127.0,Indonesia
+2009,May,15654.0,Indonesia
+2010,May,13364.0,Indonesia
+2011,May,4811.0,Indonesia
+2012,May,7999.0,Indonesia
+2013,May,10871.0,Indonesia
+2014,May,8896.0,Indonesia
+2015,May,11787.0,Indonesia
+2016,May,19075.0,Indonesia
+2017,May,5427.0,Indonesia
+2018,May,5554.0,Indonesia
+2019,May,12556.0,Indonesia
+2020,May,10725.0,Indonesia
+2021,May,6677.0,Indonesia
+2022,May,12470.0,Indonesia
+2023,May,9447.0,Indonesia
+2024,May,32020.0,Indonesia
+2025,May,157.0,Indonesia
+2007,Apr,17343.0,Indonesia
+2008,Apr,14741.0,Indonesia
+2009,Apr,16647.0,Indonesia
+2010,Apr,16274.0,Indonesia
+2011,Apr,4838.0,Indonesia
+2012,Apr,7983.0,Indonesia
+2013,Apr,11907.0,Indonesia
+2014,Apr,9088.0,Indonesia
+2015,Apr,13658.0,Indonesia
+2016,Apr,24239.0,Indonesia
+2017,Apr,5888.0,Indonesia
+2018,Apr,5420.0,Indonesia
+2019,Apr,13642.0,Indonesia
+2020,Apr,13160.0,Indonesia
+2021,Apr,6211.0,Indonesia
+2022,Apr,10664.0,Indonesia
+2023,Apr,8042.0,Indonesia
+2024,Apr,30123.0,Indonesia
+2025,Apr,5750.0,Indonesia
+2007,Mar,20473.0,Indonesia
+2008,Mar,14065.0,Indonesia
+2009,Mar,17146.0,Indonesia
+2010,Mar,19554.0,Indonesia
+2011,Mar,6474.0,Indonesia
+2012,Mar,9355.0,Indonesia
+2013,Mar,12022.0,Indonesia
+2014,Mar,8675.0,Indonesia
+2015,Mar,14884.0,Indonesia
+2016,Mar,27005.0,Indonesia
+2017,Mar,7870.0,Indonesia
+2018,Mar,5212.0,Indonesia
+2019,Mar,18110.0,Indonesia
+2020,Mar,19366.0,Indonesia
+2021,Mar,5712.0,Indonesia
+2022,Mar,10082.0,Indonesia
+2023,Mar,10220.0,Indonesia
+2024,Mar,32292.0,Indonesia
+2025,Mar,11795.0,Indonesia
+2007,Feb,25848.0,Indonesia
+2008,Feb,17724.0,Indonesia
+2009,Feb,16545.0,Indonesia
+2010,Feb,22490.0,Indonesia
+2011,Feb,6602.0,Indonesia
+2012,Feb,11074.0,Indonesia
+2013,Feb,14070.0,Indonesia
+2014,Feb,9410.0,Indonesia
+2015,Feb,20164.0,Indonesia
+2016,Feb,32117.0,Indonesia
+2017,Feb,8668.0,Indonesia
+2018,Feb,5061.0,Indonesia
+2019,Feb,24018.0,Indonesia
+2020,Feb,19693.0,Indonesia
+2021,Feb,4472.0,Indonesia
+2022,Feb,11849.0,Indonesia
+2023,Feb,10862.0,Indonesia
+2024,Feb,29411.0,Indonesia
+2025,Feb,17160.0,Indonesia
+2010,Nov,2229.0,Thailand
+2011,Nov,1615.0,Thailand
+2012,Nov,4938.0,Thailand
+2013,Nov,2574.0,Thailand
+2014,Nov,2237.0,Thailand
+2015,Nov,13731.0,Thailand
+2016,Nov,2627.0,Thailand
+2017,Nov,2512.0,Thailand
+2018,Nov,4493.0,Thailand
+2019,Nov,6842.0,Thailand
+2020,Nov,2036.0,Thailand
+2021,Nov,523.0,Thailand
+2022,Nov,4247.0,Thailand
+2023,Nov,12803.0,Thailand
+2024,Nov,7006.0,Thailand
+2025,Nov,NA,Thailand
+2010,Oct,3630.0,Thailand
+2011,Oct,1696.0,Thailand
+2012,Oct,4683.0,Thailand
+2013,Oct,3653.0,Thailand
+2014,Oct,2292.0,Thailand
+2015,Oct,10660.0,Thailand
+2016,Oct,3498.0,Thailand
+2017,Oct,2484.0,Thailand
+2018,Oct,4712.0,Thailand
+2019,Oct,8391.0,Thailand
+2020,Oct,2929.0,Thailand
+2021,Oct,544.0,Thailand
+2022,Oct,4072.0,Thailand
+2023,Oct,13040.0,Thailand
+2024,Oct,8359.0,Thailand
+2025,Oct,NA,Thailand
+2010,Sep,7463.0,Thailand
+2011,Sep,2741.0,Thailand
+2012,Sep,4645.0,Thailand
+2013,Sep,6972.0,Thailand
+2014,Sep,2697.0,Thailand
+2015,Sep,12922.0,Thailand
+2016,Sep,5012.0,Thailand
+2017,Sep,3179.0,Thailand
+2018,Sep,5936.0,Thailand
+2019,Sep,9768.0,Thailand
+2020,Sep,5604.0,Thailand
+2021,Sep,625.0,Thailand
+2022,Sep,4057.0,Thailand
+2023,Sep,15226.0,Thailand
+2024,Sep,11395.0,Thailand
+2025,Sep,NA,Thailand
+2010,Aug,11299.0,Thailand
+2011,Aug,4352.0,Thailand
+2012,Aug,5080.0,Thailand
+2013,Aug,13555.0,Thailand
+2014,Aug,3365.0,Thailand
+2015,Aug,13461.0,Thailand
+2016,Aug,6676.0,Thailand
+2017,Aug,4812.0,Thailand
+2018,Aug,7976.0,Thailand
+2019,Aug,12464.0,Thailand
+2020,Aug,9027.0,Thailand
+2021,Aug,737.0,Thailand
+2022,Aug,4833.0,Thailand
+2023,Aug,22536.0,Thailand
+2024,Aug,16119.0,Thailand
+2025,Aug,NA,Thailand
+2010,Aug,11299.0,Thailand
+2011,Aug,4352.0,Thailand
+2012,Aug,5080.0,Thailand
+2013,Aug,13555.0,Thailand
+2014,Aug,3365.0,Thailand
+2015,Aug,13461.0,Thailand
+2016,Aug,6676.0,Thailand
+2017,Aug,4812.0,Thailand
+2018,Aug,7976.0,Thailand
+2019,Aug,12464.0,Thailand
+2020,Aug,9027.0,Thailand
+2021,Aug,737.0,Thailand
+2022,Aug,4833.0,Thailand
+2023,Aug,22536.0,Thailand
+2024,Aug,16119.0,Thailand
+2025,Aug,NA,Thailand
+2010,July,10037.0,Thailand
+2011,July,5203.0,Thailand
+2012,July,5377.0,Thailand
+2013,July,18947.0,Thailand
+2014,July,3552.0,Thailand
+2015,July,11068.0,Thailand
+2016,July,4991.0,Thailand
+2017,July,5368.0,Thailand
+2018,July,9257.0,Thailand
+2019,July,15525.0,Thailand
+2020,July,11315.0,Thailand
+2021,July,792.0,Thailand
+2022,July,5854.0,Thailand
+2023,July,21381.0,Thailand
+2024,July,15371.0,Thailand
+2025,July,NA,Thailand
+2010,June,6631.0,Thailand
+2011,June,5337.0,Thailand
+2012,June,4372.0,Thailand
+2013,June,16663.0,Thailand
+2014,June,2637.0,Thailand
+2015,June,7937.0,Thailand
+2016,June,2503.0,Thailand
+2017,June,4411.0,Thailand
+2018,June,8765.0,Thailand
+2019,June,12892.0,Thailand
+2020,June,6690.0,Thailand
+2021,June,1208.0,Thailand
+2022,June,4883.0,Thailand
+2023,June,10750.0,Thailand
+2024,June,7992.0,Thailand
+2025,June,NA,Thailand
+2010,May,3666.0,Thailand
+2011,May,3501.0,Thailand
+2012,May,2412.0,Thailand
+2013,May,8784.0,Thailand
+2014,May,1436.0,Thailand
+2015,May,4645.0,Thailand
+2016,May,1230.0,Thailand
+2017,May,2230.0,Thailand
+2018,May,4532.0,Thailand
+2019,May,5527.0,Thailand
+2020,May,4190.0,Thailand
+2021,May,821.0,Thailand
+2022,May,1745.0,Thailand
+2023,May,4209.0,Thailand
+2024,May,4968.0,Thailand
+2025,May,NA,Thailand
+2010,May,3666.0,Thailand
+2011,May,3501.0,Thailand
+2012,May,2412.0,Thailand
+2013,May,8784.0,Thailand
+2014,May,1436.0,Thailand
+2015,May,4645.0,Thailand
+2016,May,1230.0,Thailand
+2017,May,2230.0,Thailand
+2018,May,4532.0,Thailand
+2019,May,5527.0,Thailand
+2020,May,4190.0,Thailand
+2021,May,821.0,Thailand
+2022,May,1745.0,Thailand
+2023,May,4209.0,Thailand
+2024,May,4968.0,Thailand
+2025,May,NA,Thailand
+2010,Apr,1868.0,Thailand
+2011,Apr,1315.0,Thailand
+2012,Apr,1338.0,Thailand
+2013,Apr,4723.0,Thailand
+2014,Apr,770.0,Thailand
+2015,Apr,1939.0,Thailand
+2016,Apr,1307.0,Thailand
+2017,Apr,1174.0,Thailand
+2018,Apr,1790.0,Thailand
+2019,Apr,3175.0,Thailand
+2020,Apr,2140.0,Thailand
+2021,Apr,333.0,Thailand
+2022,Apr,549.0,Thailand
+2023,Apr,2918.0,Thailand
+2024,Apr,4327.0,Thailand
+2025,Apr,2271.0,Thailand
+2010,Mar,2020.0,Thailand
+2011,Mar,973.0,Thailand
+2012,Mar,1106.0,Thailand
+2013,Mar,3783.0,Thailand
+2014,Mar,1010.0,Thailand
+2015,Mar,1511.0,Thailand
+2016,Mar,2347.0,Thailand
+2017,Mar,1104.0,Thailand
+2018,Mar,1544.0,Thailand
+2019,Mar,3480.0,Thailand
+2020,Mar,1618.0,Thailand
+2021,Mar,546.0,Thailand
+2022,Mar,357.0,Thailand
+2023,Mar,2636.0,Thailand
+2024,Mar,5315.0,Thailand
+2025,Mar,2447.0,Thailand
+2010,Feb,1528.0,Thailand
+2011,Feb,956.0,Thailand
+2012,Feb,938.0,Thailand
+2013,Feb,2918.0,Thailand
+2014,Feb,856.0,Thailand
+2015,Feb,1160.0,Thailand
+2016,Feb,2505.0,Thailand
+2017,Feb,1229.0,Thailand
+2018,Feb,1183.0,Thailand
+2019,Feb,3195.0,Thailand
+2020,Feb,1782.0,Thailand
+2021,Feb,551.0,Thailand
+2022,Feb,284.0,Thailand
+2023,Feb,2338.0,Thailand
+2024,Feb,7123.0,Thailand
+2025,Feb,2269.0,Thailand
+2017,Nov,10804.0,Sri Lanka
+2018,Nov,3284.0,Sri Lanka
+2019,Nov,15961.0,Sri Lanka
+2020,Nov,636.0,Sri Lanka
+2021,Nov,4058.0,Sri Lanka
+2022,Nov,6489.0,Sri Lanka
+2023,Nov,9373.0,Sri Lanka
+2024,Nov,3498.0,Sri Lanka
+2025,Nov,NA,Sri Lanka
+2017,Oct,6603.0,Sri Lanka
+2018,Oct,2349.0,Sri Lanka
+2019,Oct,12649.0,Sri Lanka
+2020,Oct,875.0,Sri Lanka
+2021,Oct,2794.0,Sri Lanka
+2022,Oct,4270.0,Sri Lanka
+2023,Oct,3631.0,Sri Lanka
+2024,Oct,2964.0,Sri Lanka
+2025,Oct,NA,Sri Lanka
+2017,Sep,6875.0,Sri Lanka
+2018,Sep,2191.0,Sri Lanka
+2019,Sep,6554.0,Sri Lanka
+2020,Sep,1507.0,Sri Lanka
+2021,Sep,1623.0,Sri Lanka
+2022,Sep,4180.0,Sri Lanka
+2023,Sep,2397.0,Sri Lanka
+2024,Sep,2772.0,Sri Lanka
+2025,Sep,NA,Sri Lanka
+2017,Aug,23898.0,Sri Lanka
+2018,Aug,4953.0,Sri Lanka
+2019,Aug,7568.0,Sri Lanka
+2020,Aug,1526.0,Sri Lanka
+2021,Aug,1136.0,Sri Lanka
+2022,Aug,7549.0,Sri Lanka
+2023,Aug,5718.0,Sri Lanka
+2024,Aug,3896.0,Sri Lanka
+2025,Aug,NA,Sri Lanka
+2017,Aug,23898.0,Sri Lanka
+2018,Aug,4953.0,Sri Lanka
+2019,Aug,7568.0,Sri Lanka
+2020,Aug,1526.0,Sri Lanka
+2021,Aug,1136.0,Sri Lanka
+2022,Aug,7549.0,Sri Lanka
+2023,Aug,5718.0,Sri Lanka
+2024,Aug,3896.0,Sri Lanka
+2025,Aug,NA,Sri Lanka
+2017,July,40474.0,Sri Lanka
+2018,July,6578.0,Sri Lanka
+2019,July,8834.0,Sri Lanka
+2020,July,2147.0,Sri Lanka
+2021,July,2994.0,Sri Lanka
+2022,July,10082.0,Sri Lanka
+2023,July,6679.0,Sri Lanka
+2024,July,4519.0,Sri Lanka
+2025,July,NA,Sri Lanka
+2017,June,21083.0,Sri Lanka
+2018,June,4143.0,Sri Lanka
+2019,June,4546.0,Sri Lanka
+2020,June,1894.0,Sri Lanka
+2021,June,3428.0,Sri Lanka
+2022,June,13254.0,Sri Lanka
+2023,June,9143.0,Sri Lanka
+2024,June,3312.0,Sri Lanka
+2025,June,NA,Sri Lanka
+2017,May,20234.0,Sri Lanka
+2018,May,4358.0,Sri Lanka
+2019,May,3725.0,Sri Lanka
+2020,May,833.0,Sri Lanka
+2021,May,1257.0,Sri Lanka
+2022,May,5695.0,Sri Lanka
+2023,May,10909.0,Sri Lanka
+2024,May,2650.0,Sri Lanka
+2025,May,NA,Sri Lanka
+2017,May,20234.0,Sri Lanka
+2018,May,4358.0,Sri Lanka
+2019,May,3725.0,Sri Lanka
+2020,May,833.0,Sri Lanka
+2021,May,1257.0,Sri Lanka
+2022,May,5695.0,Sri Lanka
+2023,May,10909.0,Sri Lanka
+2024,May,2650.0,Sri Lanka
+2025,May,NA,Sri Lanka
+2017,Apr,12574.0,Sri Lanka
+2018,Apr,2325.0,Sri Lanka
+2019,Apr,2399.0,Sri Lanka
+2020,Apr,542.0,Sri Lanka
+2021,Apr,2074.0,Sri Lanka
+2022,Apr,3785.0,Sri Lanka
+2023,Apr,7190.0,Sri Lanka
+2024,Apr,2234.0,Sri Lanka
+2025,Apr,5171.0,Sri Lanka
+2017,Mar,11815.0,Sri Lanka
+2018,Mar,2817.0,Sri Lanka
+2019,Mar,3000.0,Sri Lanka
+2020,Mar,2396.0,Sri Lanka
+2021,Mar,2595.0,Sri Lanka
+2022,Mar,3474.0,Sri Lanka
+2023,Mar,7330.0,Sri Lanka
+2024,Mar,3629.0,Sri Lanka
+2025,Mar,3771.0,Sri Lanka
+2017,Feb,5281.0,Sri Lanka
+2018,Feb,4365.0,Sri Lanka
+2019,Feb,3577.0,Sri Lanka
+2020,Feb,6313.0,Sri Lanka
+2021,Feb,2355.0,Sri Lanka
+2022,Feb,3056.0,Sri Lanka
+2023,Feb,6828.0,Sri Lanka
+2024,Feb,6047.0,Sri Lanka
+2025,Feb,3666.0,Sri Lanka
+2021,Nov,39.0,Timor-Leste
+2022,Nov,41.0,Timor-Leste
+2023,Nov,40.0,Timor-Leste
+2024,Nov,12.0,Timor-Leste
+2025,Nov,NA,Timor-Leste
+2021,Oct,12.0,Timor-Leste
+2022,Oct,63.0,Timor-Leste
+2023,Oct,68.0,Timor-Leste
+2024,Oct,39.0,Timor-Leste
+2025,Oct,NA,Timor-Leste
+2021,Sep,7.0,Timor-Leste
+2022,Sep,25.0,Timor-Leste
+2023,Sep,71.0,Timor-Leste
+2024,Sep,28.0,Timor-Leste
+2025,Sep,NA,Timor-Leste
+2021,Aug,8.0,Timor-Leste
+2022,Aug,47.0,Timor-Leste
+2023,Aug,142.0,Timor-Leste
+2024,Aug,24.0,Timor-Leste
+2025,Aug,NA,Timor-Leste
+2021,Aug,8.0,Timor-Leste
+2022,Aug,47.0,Timor-Leste
+2023,Aug,142.0,Timor-Leste
+2024,Aug,24.0,Timor-Leste
+2025,Aug,NA,Timor-Leste
+2021,July,28.0,Timor-Leste
+2022,July,139.0,Timor-Leste
+2023,July,141.0,Timor-Leste
+2024,July,30.0,Timor-Leste
+2025,July,NA,Timor-Leste
+2021,June,20.0,Timor-Leste
+2022,June,254.0,Timor-Leste
+2023,June,146.0,Timor-Leste
+2024,June,45.0,Timor-Leste
+2025,June,NA,Timor-Leste
+2021,May,13.0,Timor-Leste
+2022,May,487.0,Timor-Leste
+2023,May,373.0,Timor-Leste
+2024,May,101.0,Timor-Leste
+2025,May,NA,Timor-Leste
+2021,May,13.0,Timor-Leste
+2022,May,487.0,Timor-Leste
+2023,May,373.0,Timor-Leste
+2024,May,101.0,Timor-Leste
+2025,May,NA,Timor-Leste
+2021,Apr,13.0,Timor-Leste
+2022,Apr,700.0,Timor-Leste
+2023,Apr,275.0,Timor-Leste
+2024,Apr,307.0,Timor-Leste
+2025,Apr,127.0,Timor-Leste
+2021,Mar,116.0,Timor-Leste
+2022,Mar,1201.0,Timor-Leste
+2023,Mar,315.0,Timor-Leste
+2024,Mar,347.0,Timor-Leste
+2025,Mar,188.0,Timor-Leste
+2021,Feb,242.0,Timor-Leste
+2022,Feb,1284.0,Timor-Leste
+2023,Feb,205.0,Timor-Leste
+2024,Feb,328.0,Timor-Leste
+2025,Feb,185.0,Timor-Leste
+2019,Nov,4011.0,Bangladesh
+2022,Nov,19334.0,Bangladesh
+2023,Nov,40716.0,Bangladesh
+2024,Nov,29652.0,Bangladesh
+2025,Nov,NA,Bangladesh
+2019,Oct,8143.0,Bangladesh
+2022,Oct,21932.0,Bangladesh
+2023,Oct,67769.0,Bangladesh
+2024,Oct,30879.0,Bangladesh
+2025,Oct,NA,Bangladesh
+2019,Sep,17758.0,Bangladesh
+2022,Sep,9911.0,Bangladesh
+2023,Sep,79598.0,Bangladesh
+2024,Sep,18097.0,Bangladesh
+2025,Sep,NA,Bangladesh
+2019,Aug,51754.0,Bangladesh
+2022,Aug,3521.0,Bangladesh
+2023,Aug,71976.0,Bangladesh
+2024,Aug,6521.0,Bangladesh
+2025,Aug,NA,Bangladesh
+2019,Aug,51754.0,Bangladesh
+2022,Aug,3521.0,Bangladesh
+2023,Aug,71976.0,Bangladesh
+2024,Aug,6521.0,Bangladesh
+2025,Aug,NA,Bangladesh
+2019,July,4185.0,Bangladesh
+2022,July,1571.0,Bangladesh
+2023,July,43854.0,Bangladesh
+2024,July,2669.0,Bangladesh
+2025,July,NA,Bangladesh
+2019,June,NA,Bangladesh
+2022,June,737.0,Bangladesh
+2023,June,5956.0,Bangladesh
+2024,June,798.0,Bangladesh
+2025,June,NA,Bangladesh
+2019,May,NA,Bangladesh
+2022,May,163.0,Bangladesh
+2023,May,1036.0,Bangladesh
+2024,May,644.0,Bangladesh
+2025,May,NA,Bangladesh
+2019,May,NA,Bangladesh
+2022,May,163.0,Bangladesh
+2023,May,1036.0,Bangladesh
+2024,May,644.0,Bangladesh
+2025,May,NA,Bangladesh
+2019,Apr,NA,Bangladesh
+2022,Apr,23.0,Bangladesh
+2023,Apr,143.0,Bangladesh
+2024,Apr,504.0,Bangladesh
+2025,Apr,701.0,Bangladesh
+2019,Mar,NA,Bangladesh
+2022,Mar,20.0,Bangladesh
+2023,Mar,111.0,Bangladesh
+2024,Mar,311.0,Bangladesh
+2025,Mar,336.0,Bangladesh
+2019,Feb,NA,Bangladesh
+2022,Feb,20.0,Bangladesh
+2023,Feb,166.0,Bangladesh
+2024,Feb,339.0,Bangladesh
+2025,Feb,374.0,Bangladesh
+2024,Nov,4.0,Bhutan
+2025,Nov,NA,Bhutan
+2024,Oct,3.0,Bhutan
+2025,Oct,NA,Bhutan
+2024,Sep,1.0,Bhutan
+2025,Sep,NA,Bhutan
+2024,Sep,1.0,Bhutan
+2025,Sep,NA,Bhutan
+2024,Aug,4.0,Bhutan
+2025,Aug,NA,Bhutan
+2024,July,2.0,Bhutan
+2025,July,NA,Bhutan
+2024,June,0.0,Bhutan
+2025,June,NA,Bhutan
+2024,June,0.0,Bhutan
+2025,June,NA,Bhutan
+2024,May,0.0,Bhutan
+2025,May,NA,Bhutan
+2024,Apr,0.0,Bhutan
+2025,Apr,0.0,Bhutan
+2024,Mar,0.0,Bhutan
+2025,Mar,1.0,Bhutan
+2024,Mar,0.0,Bhutan
+2025,Mar,1.0,Bhutan
