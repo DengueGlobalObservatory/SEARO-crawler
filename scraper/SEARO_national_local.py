@@ -105,7 +105,7 @@ def extract_bar_graph_data():
         # Initialize ActionChains and the final DataFrame
         action = ActionChains(driver)
         final_df = pd.DataFrame(columns=[ 'Year', 'Month', 'Value'])
-        x_offsets =  [140, 120, 100, 60, 30, 10, -30, -60, -90, -120]
+        x_offsets =  [120, 100, 90, 80, 60, 50, 40, 20, 10, -10, -20, -30, -40, -60, -70, -80]
 
         # interactive line graph element
         graph = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.ID, "c_total_case_evolution")))
