@@ -37,7 +37,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python main_scraper.py  # Your main script name
+          python SEARO_main_scraper.py  # Your main script name
 
       - name: Commit and push changes
         run: |
