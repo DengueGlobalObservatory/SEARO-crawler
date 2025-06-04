@@ -1,4 +1,4 @@
-name: SEARO dashboard crawling 
+name: SEARO dashboard crawling
 on:
   workflow_dispatch:
   schedule:
@@ -24,21 +24,32 @@ jobs:
           pip install undetected_chromedriver
           pip install setuptools
           pip install webdriver_manager
-          
 
-        
       - name: Create Downloads directory
         run: mkdir -p ${{ github.workspace }}/output
-            
+
       # Get the latest data and store it as a CSV
       #- name: Fetch latest data
-      #  run: |-        
+      #  run: |-
       #    curl "https://raw.githubusercontent.com/ahyoung-lim/DengueCrawler/main/data/report_date.csv" -o data/report_date.csv
-              
-      - name: Running the Python script
-        run: python scraper/SEARO_national_daily_scraper.py
-        
-      - name: Commit and Push 
+
+      - name: Run scraper
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python main_scraper.py  # Your main script name
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "Auto-update data $(date)"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and Push
         run: |
          git config --global user.name "github-actions[bot]"
          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -47,4 +58,4 @@ jobs:
          git commit -am "Latest data: ${timestamp}" || exit 0
          git push
 
-        
+
