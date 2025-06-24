@@ -28,11 +28,6 @@ jobs:
       - name: Create Downloads directory
         run: mkdir -p ${{ github.workspace }}/output
 
-      # Get the latest data and store it as a CSV
-      #- name: Fetch latest data
-      #  run: |-
-      #    curl "https://raw.githubusercontent.com/ahyoung-lim/DengueCrawler/main/data/report_date.csv" -o data/report_date.csv
-
       - name: Run scraper
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

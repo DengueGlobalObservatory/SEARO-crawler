@@ -1,3 +1,7 @@
+# Extract data from a bar chart (Total cases in "General overview") and line chart (Cases by month in "Trends overview")
+# some countries report "total cases" in bar chart only (e.g., Bhutan, Maldives) but line chart often has more historical data
+# so extract data from both chart types
+
 import pandas as pd
 import time
 from datetime import datetime

@@ -1,3 +1,6 @@
+# Extract Indonesia subnational data (country profile>Indonesia>Provinces Data)
+# Run locally upon updates
+
 import undetected_chromedriver as uc
 from selenium import webdriver
 from selenium.webdriver.common.by import By

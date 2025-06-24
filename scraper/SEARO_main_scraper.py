@@ -71,7 +71,7 @@ df_current = pd.DataFrame(table)
 print(df_current)
 
 # Append the new data to the existing CSV file
-# Use GitHub token from environment variable (more secure)
+# Use GitHub token from environment variable
 token = os.getenv('GITHUB_TOKEN')
 if not token:
     print("GitHub token not found in environment variables")
@@ -79,7 +79,7 @@ if not token:
 
 headers = {'Authorization': f'token {token}'}
 
-response = requests.get("https://raw.githubusercontent.com/ahyoung-lim/SEARO-crawler/refs/heads/main/report_date.csv", headers=headers)
+response = requests.get("https://raw.githubusercontent.com/DengueGlobalObservatory/SEARO-crawler/refs/heads/main/report_date.csv", headers=headers)
 
 if response.status_code == 200:
     # Read the CSV content into a DataFrame
@@ -123,7 +123,8 @@ else:
 if should_scrape:
     try:
         # Check if the scraper file exists
-        scraper_path = "scraper/national_selenium_run.py"
+        scraper_path = "scraper/SEARO_national_selenium_run.py"
+        # this will extract data from the bart chart (Total cases in General Overview section) and line chart (cases by month in "Trend overview")
         if not os.path.exists(scraper_path):
             print(f"Scraper file not found at: {scraper_path}")
             print(f"Current working directory: {os.getcwd()}")
